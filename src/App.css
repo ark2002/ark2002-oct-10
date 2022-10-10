@@ -3,8 +3,9 @@
 
 :root {
   --primary-font-family: 'Montserrat', sans-serif;
-  --background-color-light: #FAF9F6;
-  --text-color-light1: #000;
+  --background-color-light1: #E8EBEE;
+  --background-color-light2: #FFFFFF;
+  --text-color-light1: #000000;
   --text-color-light2: #a3a3a3;
   --accent-color: #00aaff;
 }
