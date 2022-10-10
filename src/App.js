@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import { Main } from "./front-end/components/Main/Main";
 
 function App() {
   return (
     <div className="App">
-      Bleeep
+      <Main />
     </div>
   );
 }
