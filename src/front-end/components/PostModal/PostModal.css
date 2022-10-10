@@ -1,0 +1,100 @@
+.post-model__container {
+    width: 45rem;
+    background-color: var(--background-color-light2);
+    box-shadow: #0000003d 0px 3px 8px;
+    padding: 1rem 2rem;
+}
+
+.post-model__top {
+    width: 100%;
+    border-bottom: 1px solid var(--text-color-light2);
+}
+
+.post-model__title {
+    font-size: 1.2rem;
+}
+
+.close__btn {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.close__btn:hover {
+    color: var(--accent-color);
+}
+
+.post-model__details {
+    width: 100%;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.user__profile-img {
+    border-radius: 50%;
+    width: 4rem;
+}
+
+.post__visibility-dropdown {
+    margin-left: auto;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    border-radius: 1rem;
+    padding: 5px;
+    background-color: #1fc7ff25;
+    cursor: pointer;
+}
+
+.material-icons.public__icon,
+.material-icons.expand__btn {
+    font-size: 1.6rem;
+}
+
+.post__model-input {
+    width: 86%;
+    margin-left: 6rem;
+    align-self: flex-start;
+}
+
+.post__model-textarea {
+    width: 100%;
+    height: 10rem;
+    outline: none;
+    border: none;
+    resize: none;
+    font-family: var(--primary-font-family);
+}
+
+.post__model-counter {
+    align-self: flex-end;
+}
+
+.post__model-choices {
+    width: 97%;
+    padding: 1rem 0 1rem 1rem;
+    gap: 2rem;
+}
+
+.material-icons.add-image__btn,
+.material-icons.add-emoji__btn,
+.material-icons.post__icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.add-image__btn:hover,
+.add-emoji__btn:hover {
+    color: var(--accent-color);
+}
+
+.post__model-postbtn {
+    margin-left: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+    gap: 5px;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--background-color-light2);
+    cursor: pointer;
+}
