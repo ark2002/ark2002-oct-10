@@ -1,0 +1,26 @@
+.post__visibility-choices {
+    position: absolute;
+    background-color: var(--background-color-light2);
+    gap: 2rem;
+    width: 20rem;
+    right: 2rem;
+    padding: 1rem;
+    top: 8rem;
+    z-index: 3;
+}
+
+.post__visibility-choice {
+    gap: 1rem;
+}
+
+.visiblity-choice__text {
+    gap: 0.5rem;
+}
+
+.selected__icon {
+    margin-left: auto;
+}
+
+.visiblity--selected {
+    color: var(--accent-color);
+}
