@@ -1,6 +1,8 @@
+import { useState } from "react";
 import "./PostModal.css";
 
 const PostModal = () => {
+  const [wordCount, setWordCount] = useState(0);
 
   return (
     <div className="post-model__container flex__column-center">
@@ -25,13 +27,31 @@ const PostModal = () => {
         <textarea
           className="post__model-textarea"
           placeholder="What's Happening?"
+          onChange={(e) => setWordCount(e.target.value.length)}
         />
-        <h3 className="post__model-counter">0 / 250</h3>
+        <h3
+          className={`post__model-counter ${
+            wordCount > 250
+              ? `counter--error`
+              : wordCount >= 240
+              ? `counter--warn`
+              : wordCount > 0
+              ? `counter--count`
+              : ``
+          } `}
+        >
+          {wordCount} / 250
+        </h3>
       </div>
       <div className="post__model-choices flex__row-center">
         <span className="material-icons add-image__btn">image</span>
         <span className="material-icons add-emoji__btn">mood</span>
-        <button className="post__model-postbtn flex__row-center">
+        <button
+          className={`post__model-postbtn flex__row-center ${
+            wordCount < 1 || wordCount > 250 ? `postbtn--disabled` : ``
+          }`}
+          disabled={wordCount < 1 || wordCount > 250}
+        >
           <span>Send Post</span>
           <span className="material-icons post__icon">double_arrow</span>
         </button>
