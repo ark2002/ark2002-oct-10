@@ -18,6 +18,18 @@ const PostModal = () => {
     setImages(imageList);
   };
 
+  const isDisablePost =
+    (wordCount < 1 || wordCount > 250) && images.length === 0;
+
+  const wordCountStyle =
+    wordCount > 250
+      ? `counter--error`
+      : wordCount >= 240
+      ? `counter--warn`
+      : wordCount > 0
+      ? `counter--count`
+      : ``;
+
   return (
     <ImageUploading
       multiple
@@ -65,17 +77,7 @@ const PostModal = () => {
               placeholder="What's Happening?"
               onChange={(e) => setWordCount(e.target.value.length)}
             />
-            <h3
-              className={`post__modal-counter ${
-                wordCount > 250
-                  ? `counter--error`
-                  : wordCount >= 240
-                  ? `counter--warn`
-                  : wordCount > 0
-                  ? `counter--count`
-                  : ``
-              } `}
-            >
+            <h3 className={`post__modal-counter ${wordCountStyle} `}>
               {wordCount} / 250
             </h3>
             <ImageList imageList={imageList} onImageRemove={onImageRemove} />
@@ -90,13 +92,9 @@ const PostModal = () => {
             <span className="material-icons add-emoji__btn">mood</span>
             <button
               className={`post__modal-postbtn flex__row-center ${
-                (wordCount < 1 || wordCount > 250) && images.length === 0
-                  ? `postbtn--disabled`
-                  : ``
+                isDisablePost ? `postbtn--disabled` : ``
               }`}
-              disabled={
-                (wordCount < 1 || wordCount > 250) && images.length === 0
-              }
+              disabled={isDisablePost}
             >
               <span>Send Post</span>
               <span className="material-icons post__icon">double_arrow</span>
