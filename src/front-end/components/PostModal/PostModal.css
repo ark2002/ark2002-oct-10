@@ -4,6 +4,7 @@
     background-color: var(--background-color-light2);
     box-shadow: #0000003d 0px 3px 8px;
     padding: 1rem 2rem;
+    border-radius: 1rem;
 }
 
 .post-modal__top {
@@ -115,3 +116,37 @@
     background-color: var(--text-color-light2);
 }
 
+.post__modal-imglist {
+    width: 100%;
+}
+
+.image-item {
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+}
+
+.image-item img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: #00000029 0px 3px 6px, #0000003b 0px 3px 6px;
+}
+
+.image-item__btn-wrapper {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.material-icons.remove__btn {
+    font-size: 2rem;
+    color: var(--background-color-light2);
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #8080807a;
+    cursor: pointer;
+}
+
+.material-icons.remove__btn:hover {
+    background-color: var(--text-color-light2);
+}
